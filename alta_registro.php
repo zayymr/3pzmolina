@@ -99,7 +99,7 @@ pg_close($conn);
 ?>
 <br><br>
 <form action="http://www.3pzmolina.unam.mx">
-<a href="http://www.3pzmolina.unam.mx/contacto.php">Contacto</a> | <a href="http://www.3pzmolina.unam.mx/creditos.php">Créditos</a>
+<a href="http://www.3pzmolina.unam.mx/consulta.php">Consulta</a> |  <a href="http://www.3pzmolina.unam.mx/contacto.php">Contacto</a> | <a href="http://www.3pzmolina.unam.mx/creditos.php">Créditos</a>
 <input type="submit" value="Regresar al formulario" />
 </form>
 </body>
