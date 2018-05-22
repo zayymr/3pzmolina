@@ -22,14 +22,14 @@ $amaterno = filter_var($_POST['amaterno'], FILTER_SANITIZE_STRING);
 $telefono = filter_var($_POST['telefono'], FILTER_SANITIZE_STRING);
 $correo = filter_var($_POST['correo'], FILTER_SANITIZE_EMAIL);
 
-?> <div> <?php
+
 //Imprimir datos ingresados
 echo "<h2>Registro</h2>Nombre: ".$nombre;
 echo "<br>Apellido paterno: ".$apaterno;
 echo "<br>Apellido materno: ".$amaterno;
-echo "<br>Telefono: ".$telefono;
+echo "<br>Teléfono: ".$telefono;
 echo "<br>Correo: ".$correo."<br><br>";
-?> </div> <?php
+
 //Validar formularios
 if ($nombre) {
 if(!preg_match('/^()[A-ZÁÉÍÓÚÜÑa-záéíóúüñ][a-záéíóúüñ]+(\s[A-ZÁÉÍÓÚÜÑ]?[a-záéíóúüñ]+)*$/',$nombre)){
@@ -52,17 +52,17 @@ $err = 1;
 }
 if ($amaterno) {
 if (!preg_match('/^()[A-ZÁÉÍÓÚÜÑa-záéíóúüñ][a-záéíóúüñ]+(\s[A-ZÁÉÍÓÚÜÑ]?[a-záéíóúüñ]+)*$/',$amaterno)) {
-echo "Error: Apellido materno invalido<br>";
+echo "Error: Apellido materno inválido<br>";
 $err = 1;
 }
 }
 if ($telefono) {
 if (!preg_match('/[0-9]{8,12}/',$telefono)) {
-echo "Error: Telèfono invalido<br>";
+echo "Error: Teléfono inválido<br>";
 $err = 1;
 }
 } else{
-echo "El campo de telèfono no puede ir vacio<br>";
+echo "El campo de teléfono no puede ir vacio<br>";
 $err = 1;
 }
 if ($correo) {
@@ -99,6 +99,7 @@ pg_close($conn);
 ?>
 <br><br>
 <form action="http://www.3pzmolina.unam.mx">
+<a href="http://www.3pzmolina.unam.mx/contacto.php">Contacto</a> | <a href="http://www.3pzmolina.unam.mx/creditos.php">Créditos</a>
 <input type="submit" value="Regresar al formulario" />
 </form>
 </body>
